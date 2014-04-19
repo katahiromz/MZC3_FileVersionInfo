@@ -23,6 +23,7 @@ BOOL MFileVersionInfo::Open(LPCTSTR pszFileName)
         return FALSE;
     }
 
+    delete[] m_pbData;
     m_pbData = new BYTE[cb];
     assert(m_pbData);
     if (!::GetFileVersionInfo(pszFile, 0, cb, m_pbData))
