@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////
-// FileVersionInfo_inl.h -- Win32 executable file version info getter
+// FileVersionInfo_inl.hpp -- Win32 executable file version info getter
 // This file is part of MZC3.  See file "ReadMe.txt" and "License.txt".
 ////////////////////////////////////////////////////////////////////////////
 
@@ -97,12 +97,12 @@ MZC_INLINE const BYTE *MFileVersionInfo::GetData() const
     return m_pbData;
 }
 
-MZC_INLINE INT MFileVersionInfo::GetTranslationIndex() const
+MZC_INLINE int MFileVersionInfo::GetTranslationIndex() const
 {
     return m_iTranslation;
 }
 
-MZC_INLINE INT MFileVersionInfo::GetNumberOfTranslations() const
+MZC_INLINE int MFileVersionInfo::GetNumberOfTranslations() const
 {
     return m_cTranslation;
 }
@@ -112,7 +112,7 @@ MZC_INLINE const MLangAndCodePage *MFileVersionInfo::GetTranslations() const
     return m_pTranslations;
 }
 
-MZC_INLINE VOID MFileVersionInfo::Close()
+MZC_INLINE void MFileVersionInfo::Close()
 {
     if (m_pbData)
     {

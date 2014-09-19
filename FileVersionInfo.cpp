@@ -8,7 +8,7 @@
 #ifdef MZC_NO_INLINING
     #undef MZC_INLINE
     #define MZC_INLINE  /*empty*/
-    #include "FileVersionInfo_inl.h"
+    #include "FileVersionInfo_inl.hpp"
 #endif
 
 ////////////////////////////////////////////////////////////////////////////

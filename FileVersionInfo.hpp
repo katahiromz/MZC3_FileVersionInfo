@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////
-// FileVersionInfo.h -- Win32 executable file version info getter
+// FileVersionInfo.hpp -- Win32 executable file version info getter
 // This file is part of MZC3.  See file "ReadMe.txt" and "License.txt".
 ////////////////////////////////////////////////////////////////////////////
 
@@ -32,7 +32,7 @@ public:
 
     BOOL Open(LPCTSTR pszFileName);
 	BOOL QueryTranslation();
-    VOID Close();
+    void Close();
 
     BOOL GetValue(LPCTSTR pszBlockName, MString& strValue) const;
     BOOL GetFixedFileInfo(VS_FIXEDFILEINFO& info) const;
@@ -72,7 +72,7 @@ private:
 #ifndef MZC_NO_INLINING
     #undef MZC_INLINE
     #define MZC_INLINE inline
-    #include "FileVersionInfo_inl.h"
+    #include "FileVersionInfo_inl.hpp"
 #endif
 
 #endif  // ndef __MZC3_FILEVERSIONINFO__
